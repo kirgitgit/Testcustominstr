@@ -1,11 +1,11 @@
 # Excel Column Extractor
 
-A Python utility that extracts the first two columns from an Excel file and saves them to a new Excel file.
+A Python utility that extracts the first three columns from an Excel file and saves them to a new Excel file.
 
 ## Features
 
 - Reads any Excel file format supported by pandas
-- Extracts only the first two columns
+- Extracts only the first three columns
 - Creates a new Excel file with the extracted data
 - Provides detailed logging
 - Handles errors gracefully
@@ -54,7 +54,7 @@ if result:
 
 The script includes comprehensive error handling:
 - Validates that the input file exists
-- Ensures the input file has at least two columns
+- Ensures the input file has at least three columns
 - Logs detailed error information if any issues occur
 
 ## Last Updated

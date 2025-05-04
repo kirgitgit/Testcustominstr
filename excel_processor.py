@@ -5,7 +5,7 @@
 Excel Column Extractor
 
 This script reads data from an Excel file and creates a new Excel file
-containing only the first two columns of the original file.
+containing only the first three columns of the original file.
 """
 
 import os
@@ -25,7 +25,7 @@ logger = logging.getLogger('excel_processor')
 
 def process_excel_file(input_file_path, output_file_path=None):
     """
-    Read an Excel file and create a new one with only the first two columns.
+    Read an Excel file and create a new one with only the first three columns.
     
     Args:
         input_file_path (str): Path to the input Excel file
@@ -57,18 +57,18 @@ def process_excel_file(input_file_path, output_file_path=None):
         # Read the Excel file
         df = pd.read_excel(input_file_path)
         
-        # Check if file has at least 2 columns
-        if len(df.columns) < 2:
-            logger.warning(f"Input file has fewer than 2 columns: {len(df.columns)} found")
+        # Check if file has at least 3 columns
+        if len(df.columns) < 3:
+            logger.warning(f"Input file has fewer than 3 columns: {len(df.columns)} found")
             return None
             
-        # Get the first two columns
-        first_two_cols = df.iloc[:, :2]
+        # Get the first three columns
+        first_three_cols = df.iloc[:, :3]
         
-        logger.info(f"Extracted first two columns: {first_two_cols.columns.tolist()}")
+        logger.info(f"Extracted first three columns: {first_three_cols.columns.tolist()}")
         
         # Write to a new Excel file
-        first_two_cols.to_excel(output_file_path, index=False)
+        first_three_cols.to_excel(output_file_path, index=False)
         
         logger.info(f"Successfully created output file: {output_file_path}")
         return output_file_path
