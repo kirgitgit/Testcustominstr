@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ### Command Line
 
 ```bash
-python excel_processor.py <input_excel_file> [output_excel_file]
+python3 excel_processor.py <input_excel_file> [output_excel_file]
 ```
 
 Where:
